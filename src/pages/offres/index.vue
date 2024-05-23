@@ -9,7 +9,7 @@ const maisonsListe= await pb.collection('maison').getFullList();
  
 
 <template>
-  <h1 class="text-2xl">Bonjour monde !</h1>
+  <h1 class="text-2xl">Liste de toutes les offres disponibles !</h1>
   <ul>
   <li v-for="uneMaison of maisonsListe" :v-key="uneMaison.id">
     <RouterLink
