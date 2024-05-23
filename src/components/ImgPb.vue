@@ -18,6 +18,8 @@ const props = defineProps<{
 const src = pb.getFileUrl(props.record, props.filename, {
   thumb: props.thumb || `${props.width ?? 0}x${props.height ?? 0}`
 })
+console.log('src :', src);
+
 </script>
 <template>
   <img :src="src" :width="width" :height="height" />

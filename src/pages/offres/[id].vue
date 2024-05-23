@@ -1,12 +1,13 @@
 <script setup lang="ts">
-  import MaisonCard from '@/components/MaisonCard.vue'
+  import { pb } from '@/backend';
+import MaisonCard from '@/components/MaisonCard.vue'
 
   import { useRoute } from 'vue-router/auto'
 
   const route = useRoute('/offres/[id]')
   console.log('id :', route.params.id)
 
-  const uneMaison = await pb.collection('maison').getFullRecord(route.params.id)
+  const uneMaison = await pb.collection('maison').getOne( route.params.id)
 </script>
 <template>
   <div>
